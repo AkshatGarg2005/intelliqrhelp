@@ -275,9 +275,7 @@ const Dashboard = () => {
   // Cards 5 & 6: QR Code Generation and Download
   const handleGenerateQR = async () => {
     if (!user) return;
-    const publicProfileUrl = `http://localhost:3000/public-profile?uid=${
-      user.uid
-    }&name=${encodeURIComponent(name || user.displayName || "")}`;
+    const publicProfileUrl = `${process.env.REACT_APP_PUBLIC_URL}/public-profile?uid=${user.uid}&name=${encodeURIComponent(name || user.displayName || "")}`;
     const newQrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(
       publicProfileUrl
     )}`;
