@@ -1,70 +1,133 @@
-# Getting Started with Create React App
+# IntelliQrHelp 🚨 – Smart Emergency Response System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**IntelliQrHelp** is a smart emergency response platform built to assist individuals in medical or life-threatening emergencies through a **QR-based digital medical card** and a **virtual SOS alert system** powered by **Telegram Bot API**.  
 
-## Available Scripts
+The system is especially useful for elderly people, accident victims, and patients with chronic illnesses, enabling quick access to medical information and alerting emergency contacts instantly.
 
-In the project directory, you can run:
+## 💡 Features
 
-### `yarn start`
+- 🔐 **Secure Login/Signup System**  
+- 📄 **Digital Emergency Card** (with QR code)  
+- 🚨 **One-Click SOS Alert Button**  
+- 📬 **Telegram Bot Integration**  
+- 📊 **User Dashboard**  
+- 🔗 **QR Code Redirection to Public Profile**  
+- 🔒 **Secure Firebase Firestore Storage**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Tech Stack
 
-### `yarn test`
+| Component     | Technology            |
+|---------------|------------------------|
+| Frontend      | React.js, HTML, CSS    |
+| Backend       | Firebase (Firestore)   |
+| Auth & Storage| Firebase Auth & Firestore DB |
+| Alerts        | Telegram Bot API       |
+| QR Code       | QR Code Generator API  |
+| Hosting       | Vercel                 |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `yarn build`
+## 🚀 Live Demo
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+🌐 [Click here to try IntelliQrHelp](https://intelliqrhelp.vercel.app)  
+_(Note: Make sure to allow Telegram messages from bots for SOS alerts.)_
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📷 Screenshots
 
-### `yarn eject`
+### 🔐 Login Page  
+![Login](./assets/screenshots/login.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 📊 Dashboard  
+![Dashboard](./assets/screenshots/dashboard.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 🚨 SOS Message via Telegram  
+![Telegram Alert](./assets/screenshots/telegram-alert.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📦 Installation & Setup
 
-## Learn More
+### 1. Clone the Repository
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+git clone https://github.com/AkshatGarg2005/intelliqrhelp.git
+cd intelliqrhelp
+````
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 2. Install Dependencies
 
-### Code Splitting
+```bash
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 3. Setup Firebase
 
-### Analyzing the Bundle Size
+* Create a Firebase project.
+* Enable Authentication (Email/Password).
+* Setup Firestore Database.
+* Enable Firebase Hosting (optional).
+* Create a `.env` file with your credentials:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```env
+VITE_FIREBASE_API_KEY=your_api_key
+VITE_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
+VITE_FIREBASE_PROJECT_ID=your_project_id
+VITE_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
+VITE_FIREBASE_MESSAGING_SENDER_ID=xxxxxxx
+VITE_FIREBASE_APP_ID=your_app_id
+VITE_FIREBASE_MEASUREMENT_ID=your_measurement_id
+VITE_TELEGRAM_BOT_TOKEN=your_bot_token
+VITE_TELEGRAM_CHAT_ID=your_chat_id
+```
 
-### Making a Progressive Web App
+### 4. Run the App Locally
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+npm run dev
+```
 
-### Advanced Configuration
+Open your browser at `http://localhost:5173`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 🧪 Folder Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```
+intelliqrhelp/
+│
+├── public/                  # Static files
+├── src/
+│   ├── components/          # Reusable components
+│   ├── pages/               # Main pages (Login, Register, Dashboard)
+│   ├── firebase/            # Firebase config
+│   └── App.jsx              # Main App
+├── .env                     # Environment variables
+├── package.json
+└── README.md
+```
 
-### `yarn build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## ✨ Future Enhancements
+
+* 📍 GPS Location Sharing during SOS
+* 🎙️ Voice-Activated SOS Trigger
+* 🏥 Integration with Hospital Systems
+* 📱 PWA Support for Mobile Accessibility
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## 🤝 Support
+
+If you find this project useful, consider starring ⭐ the repo and sharing it with others.
+For queries, contact via [LinkedIn](https://www.linkedin.com/in/akshat-garg-vitbhopal/).
