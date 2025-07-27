@@ -36,19 +36,6 @@ _(Note: Make sure to allow Telegram messages from bots for SOS alerts.)_
 
 ---
 
-## 📷 Screenshots
-
-### 🔐 Login Page  
-![Login](./assets/screenshots/login.png)
-
-### 📊 Dashboard  
-![Dashboard](./assets/screenshots/dashboard.png)
-
-### 🚨 SOS Message via Telegram  
-![Telegram Alert](./assets/screenshots/telegram-alert.png)
-
----
-
 ## 📦 Installation & Setup
 
 ### 1. Clone the Repository
